@@ -3,7 +3,7 @@
 // Required env var (set in Vercel → Settings → Environment Variables):
 //   RESEND_API_KEY   your Resend API key
 // Optional:
-//   CONTACT_TO       recipient(s), comma-separated (default: kahlonmeirav@gmail.com,dima@holylabs.net)
+//   CONTACT_TO       recipient(s), comma-separated (default: kahlonmeirav@gmail.com,mayaor1515@gmail.com)
 //   RESEND_FROM      sender, must be on a domain verified in Resend (montigate.com)
 //                    (default: "Maya Website <noreply@montigate.com>")
 
@@ -44,7 +44,7 @@ module.exports = async (req, res) => {
     return res.status(500).json({ ok: false, error: 'השליחה אינה זמינה כרגע' });
   }
 
-  const to = (process.env.CONTACT_TO || 'kahlonmeirav@gmail.com,dima@holylabs.net').split(',').map((s) => s.trim()).filter(Boolean);
+  const to = (process.env.CONTACT_TO || 'kahlonmeirav@gmail.com,mayaor1515@gmail.com').split(',').map((s) => s.trim()).filter(Boolean);
   const from = process.env.RESEND_FROM || 'Maya Website <noreply@montigate.com>';
 
   const rows = [
