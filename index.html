@@ -146,6 +146,8 @@ label{display:flex;flex-direction:column;gap:4px;font-size:.92rem;color:var(--in
 label.full{grid-column:1/-1}
 input,textarea,select{font:inherit;color:var(--ink);background:var(--white);border:1px solid color-mix(in srgb,var(--gold) 45%,transparent);border-radius:12px;padding:10px 14px}
 textarea{min-height:110px;resize:vertical}
+form{position:relative}
+form .btn[disabled]{opacity:.6;cursor:wait}
 form .btn{grid-column:1/-1;justify-self:start;border:0;cursor:pointer;font-family:inherit}
 .form-note{grid-column:1/-1;font-size:.95rem;color:var(--gold-deep)}
 footer{background:var(--sand);text-align:center;font-size:.9rem;padding-block:22px;color:var(--ink-soft);border-top:1px solid color-mix(in srgb,var(--gold) 25%,transparent)}
@@ -357,7 +359,8 @@ footer{background:var(--sand);text-align:center;font-size:.9rem;padding-block:22
         </label>
         <label class="full">הודעה<textarea id="f-msg" name="message"></textarea></label>
         <button class="btn btn-solid" type="submit">שליחה <svg><use href="#arrow"/></svg></button>
-        <p class="form-note" id="form-note" hidden>תודה! זהו טופס לדוגמה וטרם חובר לשליחה בפועל.</p>
+        <input type="text" name="website" id="f-website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+        <p class="form-note" id="form-note" role="status" hidden></p>
       </form>
     </div>
   </section>
@@ -369,7 +372,19 @@ footer{background:var(--sand);text-align:center;font-size:.9rem;padding-block:22
 const btn=document.getElementById('menu-btn'),nav=document.getElementById('nav');
 btn.addEventListener('click',()=>{const o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
 nav.addEventListener('click',e=>{if(e.target.closest('a')){nav.classList.remove('open');btn.setAttribute('aria-expanded','false')}});
-document.getElementById('contact-form').addEventListener('submit',e=>{e.preventDefault();document.getElementById('form-note').hidden=false});
+const form=document.getElementById('contact-form'),note=document.getElementById('form-note'),sendBtn=form.querySelector('button[type="submit"]');
+form.addEventListener('submit',async e=>{
+  e.preventDefault();
+  const data=Object.fromEntries(new FormData(form));
+  sendBtn.disabled=true;note.hidden=false;note.textContent='שולחת...';
+  try{
+    const r=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+    const out=await r.json().catch(()=>({}));
+    if(r.ok&&out.ok){form.reset();note.textContent='תודה! ההודעה התקבלה ואחזור אלייך בהקדם.';}
+    else{note.textContent=out.error||'השליחה נכשלה, נסי שוב מאוחר יותר.';}
+  }catch{note.textContent='אין חיבור כרגע, נסי שוב מאוחר יותר.';}
+  finally{sendBtn.disabled=false;}
+});
 </script>
 </body>
 </html>
