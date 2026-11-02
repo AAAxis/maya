@@ -21,7 +21,7 @@ Set these in Vercel → Project → Settings → Environment Variables, then red
 | Variable | Required | Default |
 |---|---|---|
 | `RESEND_API_KEY` | yes | – |
-| `CONTACT_TO` | no | `kahlonmeirav@gmail.com,mayaor1515@gmail.com` |
+| `CONTACT_TO` | no | `dima@holylabs.net,mayaor1515@gmail.com` |
 | `RESEND_FROM` | no | `Maya Website <noreply@montigate.com>` |
 
 The sender domain `montigate.com` is verified in Resend, so mail can be delivered to any recipient.
