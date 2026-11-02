@@ -22,6 +22,6 @@ Set these in Vercel → Project → Settings → Environment Variables, then red
 |---|---|---|
 | `RESEND_API_KEY` | yes | – |
 | `CONTACT_TO` | no | `dima@holylabs.net` |
-| `RESEND_FROM` | no | `Maya Website <onboarding@resend.dev>` |
+| `RESEND_FROM` | no | `Maya Website <noreply@montigate.com>` |
 
-`onboarding@resend.dev` can only deliver to the email that owns the Resend account. To send to anyone else, verify your domain in Resend and set `RESEND_FROM`, e.g. `Maya Website <site@holylabs.net>`.
+The sender domain `montigate.com` is verified in Resend, so mail can be delivered to any recipient.

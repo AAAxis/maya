@@ -4,8 +4,8 @@
 //   RESEND_API_KEY   your Resend API key
 // Optional:
 //   CONTACT_TO       recipient(s), comma-separated (default: dima@holylabs.net)
-//   RESEND_FROM      sender, must be on a domain verified in Resend
-//                    (default: "Maya Website <onboarding@resend.dev>")
+//   RESEND_FROM      sender, must be on a domain verified in Resend (montigate.com)
+//                    (default: "Maya Website <noreply@montigate.com>")
 
 const LIMITS = { name: 120, phone: 40, email: 200, topic: 80, message: 5000 };
 
@@ -45,7 +45,7 @@ module.exports = async (req, res) => {
   }
 
   const to = (process.env.CONTACT_TO || 'dima@holylabs.net').split(',').map((s) => s.trim()).filter(Boolean);
-  const from = process.env.RESEND_FROM || 'Maya Website <onboarding@resend.dev>';
+  const from = process.env.RESEND_FROM || 'Maya Website <noreply@montigate.com>';
 
   const rows = [
     ['שם', data.name],
