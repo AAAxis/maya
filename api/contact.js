@@ -65,26 +65,60 @@ module.exports = async (req, res) => {
 
   const text = rows.map(([k, v]) => `${k}: ${v}`).join('\n') + `\n\nהודעה:\n${data.message || '—'}`;
 
+  // 1) Notify the site owner(s). This one must succeed.
   try {
-    const r = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        from,
-        to,
-        reply_to: data.email,
-        subject: `פנייה חדשה מהאתר: ${data.name}${data.topic ? ` (${data.topic})` : ''}`,
-        html,
-        text,
-      }),
+    await sendEmail(apiKey, {
+      from,
+      to,
+      reply_to: data.email,
+      subject: `פנייה חדשה מהאתר: ${data.name}${data.topic ? ` (${data.topic})` : ''}`,
+      html,
+      text,
     });
-    if (!r.ok) {
-      console.error('Resend error', r.status, await r.text());
-      return res.status(502).json({ ok: false, error: 'השליחה נכשלה, נסי שוב מאוחר יותר' });
-    }
-    return res.status(200).json({ ok: true });
   } catch (err) {
-    console.error('Resend request failed', err);
+    console.error('Owner notification failed', err);
     return res.status(502).json({ ok: false, error: 'השליחה נכשלה, נסי שוב מאוחר יותר' });
   }
+
+  // 2) Thank-you confirmation to the visitor. Fixed wording on purpose: we don't echo
+  //    the visitor's free-text message, so the form can't be used to send spam to others.
+  try {
+    await sendEmail(apiKey, {
+      from,
+      to: [data.email],
+      reply_to: to[0],
+      subject: 'תודה על פנייתך – מאיה, מסע לריפוי עצמי',
+      html: thankYouHtml(data),
+      text: thankYouText(data),
+    });
+  } catch (err) {
+    // The owner already has the message, so the visitor still sees success.
+    console.error('Thank-you email failed', err);
+  }
+
+  return res.status(200).json({ ok: true });
 };
+
+async function sendEmail(apiKey, payload) {
+  const r = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  });
+  if (!r.ok) throw new Error(`Resend ${r.status}: ${await r.text()}`);
+  return r.json();
+}
+
+function thankYouHtml(data) {
+  return `<div dir="rtl" style="font-family:Arial,sans-serif;font-size:16px;line-height:1.7;color:#4a3a2c;max-width:560px">
+  <h2 style="margin:0 0 12px;font-weight:normal">שלום ${esc(data.name)},</h2>
+  <p style="margin:0 0 12px">תודה על פנייתך! ההודעה התקבלה ונחזור אלייך בהקדם.</p>
+  ${data.topic ? `<p style="margin:0 0 12px;color:#a37a3e">נושא הפנייה: ${esc(data.topic)}</p>` : ''}
+  <p style="margin:0 0 4px">באהבה,</p>
+  <p style="margin:0">מאיה<br><span style="color:#a37a3e">מסע לריפוי עצמי</span></p>
+</div>`;
+}
+
+function thankYouText(data) {
+  return `שלום ${data.name},\n\nתודה על פנייתך! ההודעה התקבלה ונחזור אלייך בהקדם.\n${data.topic ? `נושא הפנייה: ${data.topic}\n` : ''}\nבאהבה,\nמאיה – מסע לריפוי עצמי`;
+}
