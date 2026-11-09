@@ -8,173 +8,8 @@
 <title>מאיה – מסע לריפוי עצמי</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500&family=Assistant:wght@300;400;600&family=Amatic+SC:wght@400;700&display=swap">
-<style>
-/* Layout: warm sunrise single-theme page, RTL. Wide photo bands with soft wave edges, a centered card grid, a closing landscape band. */
-:root{
-  --sand:#f8ecdd;        /* page ground */
-  --cream:#fbf4ea;       /* card / band fill */
-  --peach:#f3d9b8;       /* sunrise tint */
-  --gold:#c9a063;        /* lines, icons, outlines */
-  --gold-deep:#a37a3e;   /* button text, hover */
-  --ink:#4a3a2c;         /* headings */
-  --ink-soft:#6c5a48;    /* body */
-  --white:#fffaf3;
-  --f-display:"Frank Ruhl Libre","David Libre",Georgia,serif;
-  --f-body:"Assistant","Heebo",system-ui,sans-serif;
-  --f-hand:"Amatic SC","Frank Ruhl Libre",serif;
-  --gutter-l:max(16px, env(safe-area-inset-left,0px));
-  --gutter-r:max(16px, env(safe-area-inset-right,0px));
-  color-scheme:light;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
-body{background:var(--sand);color:var(--ink-soft);font-family:var(--f-body);font-size:17px;line-height:1.75;direction:rtl}
-h1,h2,h3{font-family:var(--f-display);color:var(--ink);font-weight:400;margin:0;text-wrap:balance}
-p{margin:0}
-a{color:inherit}
-:focus-visible{outline:2px solid var(--gold-deep);outline-offset:3px;border-radius:4px}
-.wrap{max-width:1180px;margin-inline:auto;padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
-
-/* ---------- header ---------- */
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--cream)}
-.site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--cream) 82%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid color-mix(in srgb,var(--gold) 25%,transparent)}
-.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:10px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brand img{width:62px;height:auto;mix-blend-mode:multiply;border-radius:50%}
-.brand b{display:block;font-family:var(--f-display);font-weight:400;font-size:2rem;line-height:1;color:var(--ink)}
-.brand small{display:block;font-size:.85rem;color:var(--ink-soft);letter-spacing:.02em}
-.nav{display:flex;gap:4px;flex-wrap:wrap;list-style:none;margin:0;padding:0}
-.nav a{display:block;padding:8px 12px;text-decoration:none;font-size:.97rem;color:var(--ink);border-bottom:2px solid transparent;transition:border-color .2s,color .2s}
-.nav a:hover{color:var(--gold-deep)}
-.nav a[aria-current="page"]{border-bottom-color:var(--gold);color:var(--gold-deep)}
-.nav .accent a{font-weight:600}
-.menu-btn{display:none;background:none;border:1px solid var(--gold);color:var(--ink);border-radius:999px;padding:6px 16px;font:inherit;cursor:pointer}
-
-@media (max-width:900px){
-  .menu-btn{display:inline-block}
-  .nav{display:none;position:absolute;inset-inline:0;top:100%;flex-direction:column;background:var(--cream);padding:8px var(--gutter-r) 16px var(--gutter-l);border-bottom:1px solid color-mix(in srgb,var(--gold) 30%,transparent)}
-  .nav.open{display:flex}
-  .nav a{padding:12px 4px;border-bottom:1px solid color-mix(in srgb,var(--gold) 18%,transparent)}
-}
-
-/* ---------- hero ---------- */
-.hero{position:relative;overflow:hidden;background:
-  radial-gradient(circle at 18% 62%, #fff4dc 0 6%, transparent 22%),
-  linear-gradient(180deg,#f7e3cb 0%,#f6d8b4 55%,#e9c193 100%)}
-.hero-photo{position:absolute;inset-block:0;inset-inline-start:auto;inset-inline-end:0;width:min(52%,620px);height:100%;object-fit:cover;object-position:left center;
-  -webkit-mask-image:linear-gradient(to right,#000 62%,transparent 100%);mask-image:linear-gradient(to right,#000 62%,transparent 100%)}
-.hero-hills{position:absolute;inset:auto 0 0 0;height:38%;background:
-  radial-gradient(120% 70% at 70% 100%,#d4a575 0 40%,transparent 41%),
-  radial-gradient(90% 60% at 20% 100%,#e0b588 0 45%,transparent 46%);opacity:.55}
-.hero .wrap{position:relative;display:grid;grid-template-columns:1fr 1fr;min-height:540px;padding-block:72px 110px}
-.hero-text{grid-column:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:22px;position:relative}
-.hero-text::before{content:"";position:absolute;width:560px;max-width:120%;aspect-ratio:1;border:1px solid color-mix(in srgb,#fff 70%,transparent);border-radius:50%;z-index:-1;top:50%;left:50%;transform:translate(-50%,-50%)}
-.hero h1{font-size:clamp(2.6rem,6vw,4.4rem);line-height:1.12;font-weight:300}
-.divider{display:flex;align-items:center;gap:14px;color:var(--gold);width:min(320px,80%)}
-.divider::before,.divider::after{content:"";flex:1;height:1px;background:currentColor;opacity:.7}
-.divider svg{width:30px;height:20px;flex:none}
-.hero p{font-size:1.25rem;color:var(--ink);max-width:28ch}
-.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;border-radius:999px;padding:12px 28px;font-weight:600;font-size:1.02rem;transition:transform .2s,background .2s,box-shadow .2s}
-.btn svg{width:16px;height:16px}
-.btn-solid{background:linear-gradient(180deg,#f1d4a6,#e3b97d);color:var(--ink);box-shadow:0 6px 18px -8px rgba(150,100,40,.6)}
-.btn-solid:hover{transform:translateY(-2px)}
-.btn-line{border:1px solid var(--gold);color:var(--gold-deep);background:transparent;padding:9px 26px}
-.btn-line:hover{background:var(--white)}
-.wave{display:block;width:100%;height:60px;position:absolute;bottom:-1px;inset-inline:0;color:var(--cream)}
-
-/* ---------- about ---------- */
-.about{background:var(--cream);position:relative;overflow:hidden}
-.about .wrap{display:grid;grid-template-columns:1.15fr 1fr;align-items:center;gap:48px;padding-block:56px 72px}
-.about-text{display:flex;flex-direction:column;gap:18px;align-items:flex-start;max-width:520px;margin-inline-start:8%}
-.about h2{font-size:clamp(2.2rem,4vw,3rem)}
-.about-text p{font-size:1.1rem}
-.portrait{justify-self:end;position:relative;width:min(420px,100%);aspect-ratio:1}
-.portrait img{width:100%;height:100%;object-fit:cover;object-position:center 20%;border-radius:50%;box-shadow:0 0 0 10px var(--cream),0 0 0 11px color-mix(in srgb,var(--gold) 60%,transparent)}
-.portrait::after{content:"";position:absolute;inset:-26px;border:1px solid color-mix(in srgb,var(--gold) 45%,transparent);border-radius:50%}
-.branch{position:absolute;inset-inline-start:2%;bottom:40px;width:150px;color:var(--gold);opacity:.75;pointer-events:none}
-
-/* ---------- space / cards ---------- */
-.space{padding-block:40px 80px;background:linear-gradient(180deg,var(--cream),var(--sand))}
-.section-title{display:flex;align-items:center;gap:22px;justify-content:center;margin-bottom:36px}
-.section-title::before,.section-title::after{content:"";flex:1;max-width:260px;height:1px;background:var(--gold);opacity:.6}
-.section-title h2{font-size:clamp(1.7rem,3.2vw,2.3rem)}
-.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;list-style:none;margin:0;padding:0}
-.card{background:var(--cream);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 14px 34px -22px rgba(120,80,30,.55);transition:transform .25s,box-shadow .25s}
-.card:hover{transform:translateY(-4px);box-shadow:0 20px 40px -22px rgba(120,80,30,.6)}
-.card-img{position:relative;aspect-ratio:234/130}
-.card-img img{width:100%;height:100%;object-fit:cover;display:block}
-.card-img::after{content:"";position:absolute;inset:auto -10% -40px -10%;height:70px;background:var(--cream);border-radius:50% 50% 0 0}
-.card-body{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;padding:0 18px 24px;flex:1}
-.card-icon{width:30px;height:30px;color:var(--gold);margin-top:-6px}
-.card h3{font-size:1.4rem;font-weight:500}
-.card p{font-size:.98rem;line-height:1.5}
-.card .btn{margin-top:auto;padding:7px 22px;font-size:.95rem;font-weight:400}
-.card-body .spacer{height:10px}
-.card.featured{outline:1px solid color-mix(in srgb,var(--gold) 55%,transparent)}
-
-/* ---------- protocols detail ---------- */
-.protocols{background:var(--sand);padding-block:24px 80px}
-.protocols-head{text-align:center;max-width:620px;margin:0 auto 34px;display:flex;flex-direction:column;align-items:center;gap:12px}
-.protocols-head h2{font-size:clamp(1.9rem,3.4vw,2.5rem)}
-.eyebrow{font-size:.85rem;letter-spacing:.12em;color:var(--gold-deep);font-weight:600}
-.proto-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;list-style:none;margin:0;padding:0}
-.proto{background:var(--white);border:1px solid color-mix(in srgb,var(--gold) 30%,transparent);border-radius:16px;padding:22px 24px;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;align-items:start}
-.proto svg{grid-row:span 3;width:34px;height:34px;color:var(--gold)}
-.proto h3{font-size:1.25rem;font-weight:500}
-.proto p{font-size:.98rem;line-height:1.6;min-width:0}
-.proto .meta{font-size:.85rem;color:var(--gold-deep)}
-
-/* ---------- closing ---------- */
-.closing{position:relative;overflow:hidden;background:
-  radial-gradient(circle at 78% 72%, #fff3d6 0 4%, transparent 18%),
-  linear-gradient(180deg,#f6e3c9 0%,#f0cfa2 70%,#d9ad73 100%)}
-.closing-tree{position:absolute;inset-block:0;inset-inline-end:0;height:100%;width:auto;max-width:40%;object-fit:cover;object-position:left;
-  -webkit-mask-image:linear-gradient(to right,#000 70%,transparent);mask-image:linear-gradient(to right,#000 70%,transparent)}
-.closing .wrap{position:relative;text-align:center;display:flex;flex-direction:column;align-items:center;gap:20px;padding-block:90px 110px}
-.closing h2{font-family:var(--f-hand);font-weight:700;font-size:clamp(2.8rem,6vw,4.2rem);line-height:1;color:var(--ink)}
-.closing p{font-size:1.2rem;color:var(--ink);max-width:30ch}
-.closing .wave{top:-1px;bottom:auto;transform:scaleY(-1);color:var(--sand)}
-
-/* ---------- contact ---------- */
-.contact{background:var(--cream);padding-block:64px}
-.contact .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:48px;align-items:start}
-.contact h2{font-size:clamp(1.9rem,3.4vw,2.5rem);margin-bottom:12px}
-form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-label{display:flex;flex-direction:column;gap:4px;font-size:.92rem;color:var(--ink)}
-label.full{grid-column:1/-1}
-input,textarea,select{font:inherit;color:var(--ink);background:var(--white);border:1px solid color-mix(in srgb,var(--gold) 45%,transparent);border-radius:12px;padding:10px 14px}
-textarea{min-height:110px;resize:vertical}
-form{position:relative}
-form .btn[disabled]{opacity:.6;cursor:wait}
-form .btn{grid-column:1/-1;justify-self:start;border:0;cursor:pointer;font-family:inherit}
-.form-note{grid-column:1/-1;font-size:.95rem;color:var(--gold-deep)}
-footer{background:var(--sand);text-align:center;font-size:.9rem;padding-block:22px;color:var(--ink-soft);border-top:1px solid color-mix(in srgb,var(--gold) 25%,transparent)}
-
-/* ---------- responsive ---------- */
-@media (max-width:980px){
-  .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
-}
-@media (max-width:760px){
-  .hero .wrap{grid-template-columns:1fr;min-height:0;padding-block:300px 90px}
-  .hero-photo{width:100%;height:340px;inset-block:0 auto;-webkit-mask-image:linear-gradient(to bottom,#000 65%,transparent);mask-image:linear-gradient(to bottom,#000 65%,transparent);object-position:center 30%}
-  .hero-text::before{display:none}
-  .about .wrap{grid-template-columns:1fr;gap:28px}
-  .about-text{margin:0;order:2}
-  .portrait{justify-self:center;width:min(300px,82%);order:1}
-  .branch{display:none}
-  .proto-list{grid-template-columns:1fr}
-  .contact .wrap{grid-template-columns:1fr;gap:24px}
-  .closing-tree{max-width:60%;opacity:.55}
-}
-@media (max-width:520px){
-  .cards{grid-template-columns:1fr}
-  form{grid-template-columns:1fr}
-  .brand img{width:48px}
-  .brand b{font-size:1.6rem}
-}
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Assistant:wght@300;400;600&family=Amatic+SC:wght@400;700&display=swap">
+<link rel="stylesheet" href="styles.css">
 <style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
 <body>
@@ -183,14 +18,11 @@ footer{background:var(--sand);text-align:center;font-size:.9rem;padding-block:22
   <symbol id="lotus" viewBox="0 0 48 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round">
     <path d="M24 4c4 5 4 14 0 22-4-8-4-17 0-22Z"/><path d="M24 26c-3-8-9-12-15-12 1 7 7 12 15 12Z"/><path d="M24 26c3-8 9-12 15-12-1 7-7 12-15 12Z"/><path d="M24 26c-6-2-14-2-20 1 6 3 14 2 20-1Zm0 0c6-2 14-2 20 1-6 3-14 2-20-1Z"/>
   </symbol>
+  <symbol id="heart" viewBox="0 0 24 22"><path fill="currentColor" d="M12 21S1 14 1 7a5.5 5.5 0 0 1 11-1 5.5 5.5 0 0 1 11 1c0 7-11 14-11 14Z"/></symbol>
   <symbol id="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 8H3m4-4L3 8l4 4"/></symbol>
   <symbol id="infinity" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M16 16c-3-4-5-6-8-6a6 6 0 0 0 0 12c3 0 5-2 8-6Zm0 0c3 4 5 6 8 6a6 6 0 0 0 0-12c-3 0-5 2-8 6Z"/></symbol>
   <symbol id="sun" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><circle cx="16" cy="16" r="6"/><circle cx="16" cy="16" r="3"/><path d="M16 3v4M16 25v4M3 16h4M25 16h4M6.8 6.8l2.8 2.8M22.4 22.4l2.8 2.8M6.8 25.2l2.8-2.8M22.4 9.6l2.8-2.8"/></symbol>
   <symbol id="leaf" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 26C6 13 14 6 27 5c0 13-7 21-20 21Z"/><path d="M6 26 20 12M12 20h6M15 17v-5"/></symbol>
-  <symbol id="breath" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M4 12h15a4 4 0 1 0-4-4M4 18h20a4 4 0 1 1-4 4M4 24h8"/></symbol>
-  <symbol id="heart" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M16 27S4 20 4 11.5A6.5 6.5 0 0 1 16 8a6.5 6.5 0 0 1 12 3.5C28 20 16 27 16 27Z"/><path d="M9 15h4l2-3 3 6 2-3h3"/></symbol>
-  <symbol id="moon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M22 22A10 10 0 0 1 13 5a11 11 0 1 0 14 14 10 10 0 0 1-5 3Z"/></symbol>
-  <symbol id="hand" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M11 17V7a2 2 0 0 1 4 0v8m0-2V5a2 2 0 0 1 4 0v10m0-6a2 2 0 0 1 4 0v9c0 6-4 10-9 10-4 0-6-2-8-5l-3-5a2 2 0 0 1 3-2l2 2"/></symbol>
 </svg>
 
 <header class="site-header">
@@ -202,50 +34,48 @@ footer{background:var(--sand);text-align:center;font-size:.9rem;padding-block:22
     <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav">תפריט</button>
     <ul class="nav" id="nav">
       <li><a href="#home" aria-current="page">דף הבית</a></li>
-      <li><a href="#about">הסיפור שלי</a></li>
+      <li><a href="story.html">הסיפור שלי</a></li>
+      <li><a href="method.html">השיטה</a></li>
       <li><a href="#space">סדנאות והרצאות</a></li>
       <li><a href="#space">קורסים</a></li>
       <li><a href="#space">טקסטים</a></li>
-      <li class="accent"><a href="#protocols">פרוטוקולים וטכניקות</a></li>
+      <li class="accent"><a href="method.html#principles">פרוטוקולים וטכניקות</a></li>
       <li><a href="#contact">צור קשר</a></li>
     </ul>
   </div>
 </header>
 
 <main>
-  <section class="hero" id="home">
-    <img class="hero-photo" src="img/hero.jpg" alt="אישה יושבת על סלע מול נוף הרים בזריחה">
-    <div class="hero-hills" aria-hidden="true"></div>
+  <section class="home-hero" id="home">
     <div class="wrap">
-      <div class="hero-text">
-        <h1>מחיי הישרדות<br>לחיי מימוש</h1>
+      <div class="hero-ring">
+        <img class="hero-logo" src="img/logo.jpg" alt="">
+        <h1 class="hero-name">מאיה</h1>
+        <p class="hero-tag">מסע לריפוי עצמי</p>
+        <div class="heart-rule" aria-hidden="true"><svg><use href="#heart"/></svg></div>
+        <p class="brush-line">מחיי הישרדות לחיי מימוש</p>
+        <p class="hero-sub">חיבור מחדש לעצמך, לגוף, לנפש ולרוח</p>
         <div class="divider" aria-hidden="true"><svg><use href="#lotus"/></svg></div>
-        <p>מסע של חיבור מחדש לעצמך, לגוף, לנפש ולרוח.</p>
-        <a class="btn btn-solid" href="#about">הכירי את הדרך שלי <svg><use href="#arrow"/></svg></a>
       </div>
     </div>
-    <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 40C240 10 480 0 720 18s480 38 720 8V60H0Z"/></svg>
   </section>
 
-  <section class="about" id="about">
-    <div class="wrap">
-      <div class="about-text">
-        <h2>קצת עליי</h2>
-        <p>סיפור אישי, דרך של צמיחה, ניסיון מקצועי ותפיסה הוליסטית המחברת בין רוח, גוף ונפש.</p>
-        <p>כי כל כאב הוא הזדמנות לצמיחה.</p>
-        <a class="btn btn-line" href="#space">הסיפור שלי <svg><use href="#arrow"/></svg></a>
+  <section class="story-teaser" id="about">
+    <a class="story-link" href="story.html">
+      <div class="story-photo"><img src="img/story.jpg" alt="מאיה"></div>
+      <div class="story-side">
+        <h2>הסיפור שלי</h2>
+        <div class="heart-rule wide-rule" aria-hidden="true"><svg><use href="#heart"/></svg></div>
+        <span class="btn btn-line">לקריאה <svg><use href="#arrow"/></svg></span>
       </div>
-      <div class="portrait">
-        <img src="img/portrait.jpg" alt="מאיה מחייכת, ראשה נשען על ידה">
-      </div>
-    </div>
-    <svg class="branch" viewBox="0 0 120 170" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true">
-      <path d="M8 165C40 130 70 80 104 8"/>
-      <path d="M30 136c-14-2-24-12-24-24 12 2 22 12 24 24Z"/><path d="M30 136c4-14 16-22 30-20-4 13-16 21-30 20Z"/>
-      <path d="M52 102c-12-4-20-16-18-28 11 4 19 15 18 28Z"/><path d="M52 102c6-12 19-18 32-14-6 12-19 17-32 14Z"/>
-      <path d="M72 66c-10-6-15-18-11-29 10 6 14 18 11 29Z"/><path d="M72 66c8-10 21-13 33-7-8 10-21 13-33 7Z"/>
-      <path d="M92 32c-6-8-6-20 1-28 6 8 6 20-1 28Z"/>
-    </svg>
+    </a>
+  </section>
+
+  <section class="method-teaser" id="method">
+    <a class="method-circle" href="method.html" aria-label="השיטה המחברת – לקריאה על השיטה">
+      <img src="img/method-circle.jpg" alt="השיטה המחברת">
+    </a>
+    <a class="btn btn-line" href="method.html">השיטה המחברת <svg><use href="#arrow"/></svg></a>
   </section>
 
   <section class="space" id="space">
@@ -289,44 +119,8 @@ footer{background:var(--sand);text-align:center;font-size:.9rem;padding-block:22
             <h3>פרוטוקולים וטכניקות</h3>
             <p>טכניקות לעבודה פנימית</p>
             <div class="spacer"></div>
-            <a class="btn btn-line" href="#protocols">לפרטים נוספים <svg><use href="#arrow"/></svg></a>
+            <a class="btn btn-line" href="method.html#principles">לפרטים נוספים <svg><use href="#arrow"/></svg></a>
           </div>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="protocols" id="protocols">
-    <div class="wrap">
-      <div class="protocols-head">
-        <span class="eyebrow">פרוטוקולים וטכניקות</span>
-        <h2>תרגולים שאפשר לקחת הביתה</h2>
-        <p>פרוטוקולים מובנים וטכניקות פשוטות לעבודה פנימית יומיומית, לחיבור בין הגוף, הנפש והרוח.</p>
-      </div>
-      <ul class="proto-list">
-        <li class="proto">
-          <svg><use href="#breath"/></svg>
-          <h3>נשימה מרגיעה 4-7-8</h3>
-          <p>שאיפה ב-4, עצירה ב-7, נשיפה ב-8. מאטה את הדופק ומרגיעה את מערכת העצבים.</p>
-          <span class="meta">5 דקות · בכל זמן ביום</span>
-        </li>
-        <li class="proto">
-          <svg><use href="#hand"/></svg>
-          <h3>סריקת גוף מודעת</h3>
-          <p>מעבר איטי מכפות הרגליים ועד הראש, הקשבה לתחושות בלי לשפוט ושחרור מתחים.</p>
-          <span class="meta">15 דקות · לפני השינה</span>
-        </li>
-        <li class="proto">
-          <svg><use href="#heart"/></svg>
-          <h3>פרוטוקול ויסות רגשי</h3>
-          <p>עצירה, זיהוי הרגש, מיקומו בגוף ונשימה אליו. ארבעה צעדים לרגעים של הצפה.</p>
-          <span class="meta">3 דקות · ברגעי לחץ</span>
-        </li>
-        <li class="proto">
-          <svg><use href="#moon"/></svg>
-          <h3>טקס בוקר וערב</h3>
-          <p>כוונה לבוקר וכתיבת הכרת תודה בערב. מסגרת קבועה שמחזירה אותך לעצמך.</p>
-          <span class="meta">10 דקות · פעמיים ביום</span>
         </li>
       </ul>
     </div>
@@ -359,7 +153,7 @@ footer{background:var(--sand);text-align:center;font-size:.9rem;padding-block:22
         </label>
         <label class="full">הודעה<textarea id="f-msg" name="message"></textarea></label>
         <button class="btn btn-solid" type="submit">שליחה <svg><use href="#arrow"/></svg></button>
-        <input type="text" name="website" id="f-website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+        <input type="text" name="website" id="f-website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;inset-inline-start:0;bottom:0;width:1px;height:1px;opacity:0;pointer-events:none;clip-path:inset(50%)">
         <p class="form-note" id="form-note" role="status" hidden></p>
       </form>
     </div>

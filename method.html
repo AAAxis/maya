@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="אר&quot;ד – השיטה המחברת: שיטה לריפוי עצמי מתוך אמונה, רצון ודרך. המעבר מחיי הישרדות לחיי מימוש וסיפוק.">
+<link rel="icon" href="img/logo.jpg">
+<title>אר"ד – השיטה המחברת | מאיה</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Assistant:wght@300;400;600&family=Amatic+SC:wght@400;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>
+body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+/* Method page: one calm reading column on a sunrise sky, golden circles as the only ornament. */
+:root{
+  --sky-top:#dfe7ef;
+  --sky-mid:#f6e7d6;
+  --gold-hi:#fff3d6;
+  --gold-mid:#ebc57f;
+  --brush:#efd29a;
+  --read:#3f3226;
+}
+.method{background:
+  radial-gradient(circle at 12% 520px, rgba(255,246,222,.95) 0 60px, rgba(255,232,190,.55) 140px, transparent 360px),
+  linear-gradient(180deg,var(--sky-top) 0,var(--sky-mid) 620px,var(--cream) 1100px,var(--cream) 100%);
+  color:var(--read);font-family:var(--f-display);position:relative;overflow:hidden}
+.method .col{max-width:760px;margin-inline:auto;padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
+.method .wide{max-width:1120px;margin-inline:auto;padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
+.method p{font-size:1.22rem;line-height:2;margin:0}
+.method p + p{margin-top:1.1em}
+.leaf-branch{position:absolute;top:0;inset-inline-end:0;width:min(260px,40vw);color:#b8913f;opacity:.55;pointer-events:none}
+
+.m-hero{text-align:center;padding-block:56px 20px;display:flex;flex-direction:column;align-items:center;gap:18px}
+.sefirot-top{width:120px;height:auto;color:var(--gold);filter:drop-shadow(0 0 10px rgba(255,236,190,.9))}
+.m-hero h1{font-weight:700;font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.1;color:var(--ink)}
+.diamond-rule{display:flex;align-items:center;gap:12px;color:var(--gold);width:min(420px,80%)}
+.diamond-rule::before,.diamond-rule::after{content:"";flex:1;height:1px;background:currentColor;opacity:.7}
+.diamond-rule i{width:10px;height:10px;border:1.5px solid currentColor;transform:rotate(45deg)}
+.m-hero .lead{max-width:36ch;font-size:1.32rem}
+
+.verse{margin:44px auto 0;text-align:center;max-width:620px;display:flex;flex-direction:column;align-items:center;gap:14px}
+.verse blockquote{margin:0;font-size:clamp(1.3rem,2.6vw,1.6rem);line-height:1.9;color:var(--ink);font-weight:500}
+.verse svg{width:40px;height:26px;color:var(--gold)}
+
+.brush{position:relative;display:inline-block;padding:14px 56px;margin-inline:auto;font-weight:700;font-size:clamp(1.5rem,3.6vw,2.2rem);color:var(--ink);line-height:1.3;text-wrap:balance;text-align:center;isolation:isolate}
+.brush::before{content:"";position:absolute;inset:4px 0;z-index:-1;
+  background:linear-gradient(90deg,transparent 0,var(--brush) 9%,var(--gold-mid) 50%,var(--brush) 91%,transparent 100%);
+  clip-path:polygon(2% 30%,8% 6%,30% 12%,55% 2%,80% 10%,97% 4%,100% 45%,96% 92%,70% 86%,45% 98%,20% 88%,4% 96%,0 60%);opacity:.85}
+.center{text-align:center}
+.method p.brush{font-size:clamp(1.4rem,3.4vw,2rem);line-height:1.4}
+
+section.m-block{padding-block:56px}
+.m-block h2{font-weight:700;font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.25;text-align:center;color:var(--ink);margin-bottom:28px}
+
+/* gold medallions */
+.medal{--s:104px;width:var(--s);height:var(--s);flex:none;border-radius:50%;display:grid;place-items:center;
+  background:radial-gradient(circle at 50% 38%,var(--gold-hi) 0,#f6dca6 45%,var(--gold-mid) 78%,var(--gold) 100%);
+  box-shadow:0 0 0 2px #fff7e6,0 0 0 4px color-mix(in srgb,var(--gold) 70%,transparent),0 10px 30px -10px rgba(170,120,40,.6)}
+.medal svg{width:58%;height:58%;color:#fffaf0;filter:drop-shadow(0 1px 2px rgba(150,100,30,.55))}
+
+.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:44px;list-style:none;padding:0}
+.pillar{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;padding:8px 28px 12px}
+.pillar + .pillar{border-inline-start:1px solid color-mix(in srgb,var(--gold) 55%,transparent)}
+.pillar h3{font-weight:700;font-size:2rem;color:var(--ink)}
+.pillar h3 b{color:var(--gold-deep)}
+.pillar p{font-size:1.15rem;line-height:1.9}
+
+.triad{display:block;width:min(360px,100%);margin:36px auto 0}
+.triad text{font-family:var(--f-display);font-size:15px;fill:var(--ink)}
+
+.banner-pill{display:block;width:fit-content;max-width:100%;margin:40px auto;padding:14px 34px;border-radius:999px;text-align:center;
+  font-weight:700;font-size:clamp(1.25rem,2.8vw,1.6rem);line-height:1.5;color:var(--ink);
+  background:linear-gradient(180deg,#fff6e3,#f6e1b6);border:1px solid color-mix(in srgb,var(--gold) 70%,transparent);box-shadow:0 8px 24px -14px rgba(160,110,40,.7)}
+
+.principles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;list-style:none;padding:0;margin:40px 0 0}
+.principle{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;background:color-mix(in srgb,var(--white) 82%,transparent);
+  border:1px solid color-mix(in srgb,var(--gold) 30%,transparent);border-radius:22px;padding:24px 24px 26px}
+.principle .medal{--s:76px}
+.principle h3{font-weight:700;font-size:1.32rem;line-height:1.4;color:var(--ink);margin-bottom:6px}
+.principle h3 .letter{color:var(--gold-deep);margin-inline-end:6px}
+.principle p{font-size:1.1rem!important;line-height:1.85!important;min-width:0}
+.principle div{min-width:0}
+
+.after{margin-top:48px}
+.tools-note{display:block;margin:44px auto 0;max-width:820px;padding:16px 30px;border-radius:999px;text-align:center;font-size:1.15rem;line-height:1.7;color:var(--ink);
+  background:linear-gradient(180deg,#fff8ea,#f5e3bd);border:1.5px solid var(--gold)}
+
+.m-cta{text-align:center;padding-block:40px 90px;display:flex;flex-direction:column;align-items:center;gap:18px}
+.m-cta h2{font-family:var(--f-hand);font-weight:700;font-size:clamp(2.6rem,6vw,3.6rem);line-height:1;color:var(--ink)}
+.lotus-rule{display:flex;align-items:center;gap:14px;color:var(--gold);width:min(360px,80%);margin:8px auto}
+.lotus-rule::before,.lotus-rule::after{content:"";flex:1;height:1px;background:currentColor;opacity:.7}
+.lotus-rule svg{width:34px;height:22px}
+.sea{height:120px;background:linear-gradient(180deg,var(--cream) 0,#f3dcc0 35%,#b9cfd6 36%,#8fb2bf 70%,#7aa3b2 100%);opacity:.75}
+
+@media (max-width:860px){
+  .principles{grid-template-columns:1fr}
+}
+@media (max-width:700px){
+  .pillars{grid-template-columns:1fr;gap:34px}
+  .pillar + .pillar{border-inline-start:0;border-top:1px solid color-mix(in srgb,var(--gold) 45%,transparent);padding-top:34px}
+  .method p{font-size:1.12rem}
+  .brush{padding:12px 28px}
+  .banner-pill,.tools-note{border-radius:24px}
+  .principle{grid-template-columns:1fr;justify-items:center;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="lotus" viewBox="0 0 48 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round">
+    <path d="M24 4c4 5 4 14 0 22-4-8-4-17 0-22Z"/><path d="M24 26c-3-8-9-12-15-12 1 7 7 12 15 12Z"/><path d="M24 26c3-8 9-12 15-12-1 7-7 12-15 12Z"/><path d="M24 26c-6-2-14-2-20 1 6 3 14 2 20-1Zm0 0c6-2 14-2 20 1-6 3-14 2-20-1Z"/>
+  </symbol>
+  <symbol id="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 8H3m4-4L3 8l4 4"/></symbol>
+  <symbol id="sefirot" viewBox="0 0 40 52" fill="none" stroke="currentColor" stroke-width="1.2">
+    <path d="M20 4 30 11 30 23 30 35 20 48M20 4 10 11 10 23 10 35 20 48M20 4V48M10 11H30M10 23H30M10 35H30M10 11 20 26 30 11M10 23 20 26 30 23M10 35 20 26 30 35M10 35 20 40 30 35" opacity=".6"/>
+    <g fill="currentColor" stroke="none"><circle cx="20" cy="4" r="2.6"/><circle cx="30" cy="11" r="2.6"/><circle cx="10" cy="11" r="2.6"/><circle cx="30" cy="23" r="2.6"/><circle cx="10" cy="23" r="2.6"/><circle cx="20" cy="26" r="2.6"/><circle cx="30" cy="35" r="2.6"/><circle cx="10" cy="35" r="2.6"/><circle cx="20" cy="40" r="2.6"/><circle cx="20" cy="48" r="2.6"/></g>
+  </symbol>
+  <symbol id="flower" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3">
+    <circle cx="20" cy="20" r="18"/><circle cx="20" cy="20" r="6"/><circle cx="20" cy="14" r="6"/><circle cx="20" cy="26" r="6"/><circle cx="14.8" cy="17" r="6"/><circle cx="25.2" cy="17" r="6"/><circle cx="14.8" cy="23" r="6"/><circle cx="25.2" cy="23" r="6"/>
+  </symbol>
+  <symbol id="road" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 24 14 12l5 6 5-8 12 14"/><circle cx="24" cy="6" r="2"/><path d="M19 38c-6-3 10-6 2-10s6-4 3-6M25 38c-4-3 9-6 2-10"/>
+  </symbol>
+  <symbol id="stones" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4"><ellipse cx="20" cy="33" rx="13" ry="4.5"/><ellipse cx="20" cy="24" rx="10" ry="4"/><ellipse cx="20" cy="16" rx="7.5" ry="3.4"/><ellipse cx="20" cy="9" rx="5" ry="2.8"/></symbol>
+  <symbol id="brain" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 8c-2-3-8-3-9 1-4 0-6 4-4 7-3 2-3 7 1 9 0 4 4 6 7 5 1 3 4 3 5 1V8Z"/><path d="M20 8c2-3 8-3 9 1 4 0 6 4 4 7 3 2 3 7-1 9 0 4-4 6-7 5-1 3-4 3-5 1"/><path d="M11 16c2 0 4 1 4 3M29 16c-2 0-4 1-4 3M12 25c2-1 4 0 5 1M28 25c-2-1-4 0-5 1"/>
+  </symbol>
+  <symbol id="path" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M2 20c6-4 10-4 16 0s12 4 20-2"/><path d="M14 38c2-6 10-6 8-12s-6-4-3-6"/><path d="M22 38c2-5 8-6 6-12"/><circle cx="30" cy="8" r="3"/></symbol>
+  <symbol id="butterfly" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M20 12v20"/><path d="M20 15C16 7 6 5 5 11s5 9 15 9C10 21 7 27 10 31s9 0 10-8"/><path d="M20 15c4-8 14-10 15-4s-5 9-15 9c10 1 13 7 10 11s-9 0-10-8"/><path d="M18 9l2 3 2-3"/></symbol>
+  <symbol id="sun" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><circle cx="16" cy="16" r="6"/><circle cx="16" cy="16" r="3"/><path d="M16 3v4M16 25v4M3 16h4M25 16h4M6.8 6.8l2.8 2.8M22.4 22.4l2.8 2.8M6.8 25.2l2.8-2.8M22.4 9.6l2.8-2.8"/></symbol>
+  <symbol id="infinity" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M16 16c-3-4-5-6-8-6a6 6 0 0 0 0 12c3 0 5-2 8-6Zm0 0c3 4 5 6 8 6a6 6 0 0 0 0-12c-3 0-5 2-8 6Z"/></symbol>
+</svg>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="מאיה – דף הבית">
+      <img src="img/logo.jpg" alt="">
+      <span><b>מאיה</b><small>מסע לריפוי עצמי</small></span>
+    </a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav">תפריט</button>
+    <ul class="nav" id="nav">
+      <li><a href="index.html">דף הבית</a></li>
+      <li><a href="index.html#about">הסיפור שלי</a></li>
+      <li><a href="method.html" aria-current="page">השיטה</a></li>
+      <li><a href="index.html#space">סדנאות והרצאות</a></li>
+      <li><a href="index.html#space">קורסים</a></li>
+      <li><a href="index.html#space">טקסטים</a></li>
+      <li class="accent"><a href="#principles">פרוטוקולים וטכניקות</a></li>
+      <li><a href="index.html#contact">צור קשר</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="method">
+  <svg class="leaf-branch" viewBox="0 0 200 160" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+    <path d="M0 6C50 20 100 50 190 150"/>
+    <path d="M40 18c-6-12-2-22 8-26 3 12-1 22-8 26Zm0 0c10-8 22-8 30 0-10 8-22 8-30 0Z"/>
+    <path d="M80 44c-4-13 1-23 12-25 2 12-3 22-12 25Zm0 0c11-6 23-4 30 5-11 6-23 4-30-5Z"/>
+    <path d="M118 78c-2-13 4-22 15-23 0 12-6 21-15 23Zm0 0c12-4 23 0 28 10-12 4-23 0-28-10Z"/>
+    <path d="M152 114c0-12 7-20 18-19-2 12-9 19-18 19Z"/>
+  </svg>
+
+  <!-- ===== opening ===== -->
+  <div class="col">
+    <div class="m-hero">
+      <svg class="sefirot-top" aria-hidden="true"><use href="#sefirot"/></svg>
+      <h1>אר"ד – השיטה המחברת</h1>
+      <div class="diamond-rule" aria-hidden="true"><i></i></div>
+      <p class="lead">שיטה לריפוי עצמי שהיא כולה חיבור</p>
+    </div>
+
+    <p>שיטה לריפוי עצמי שהיא כולה חיבור – בין שמים וארץ, רוח וחומר, דת ואמונה בעולם המודרני, ישן וחדש, ובעיקר מחברת אותנו לעצמנו, אליו.</p>
+    <p><b>השיבה הביתה</b> – כי כולה מושתתת על התבוננות פנימית ובנייה פנימית בלא תלות חיצונית.<br>
+    <b>השיבה אליו</b> – כי כולה מושתתת על "אם בחוקותיו תלכו" במשמעות הקבלית, לפי תורת הנסתר.</p>
+
+    <div class="verse">
+      <svg aria-hidden="true"><use href="#lotus"/></svg>
+      <blockquote>"מִי יִתֵּן מִצִּיּוֹן יְשׁוּעַת יִשְׂרָאֵל,<br>בְּשׁוּב ה' שְׁבוּת עַמּוֹ יָגֵל יַעֲקֹב יִשְׂמַח יִשְׂרָאֵל."</blockquote>
+    </div>
+  </div>
+
+  <!-- ===== אמונה, רצון, דרך ===== -->
+  <section class="m-block" id="ard">
+    <div class="wide">
+      <div class="center"><h2 class="brush">חיים מתוך אמונה, רצון ודרך</h2></div>
+      <div class="col" style="margin-top:26px">
+        <p class="center">דרך חיים מתוך איזון אנרגטי (תדרים והשדה האחד), מתוך אמונה במסע הנשמתי והנסתר שרב על הגלוי, ומתוך ניהול מערכות המודע עד להיותנו מונעים מהרצון הנשמתי הגבוה – המקדם.</p>
+      </div>
+      <ul class="pillars">
+        <li class="pillar">
+          <span class="medal"><svg><use href="#flower"/></svg></span>
+          <h3><b>א</b>מונה</h3>
+          <p>מכלול תפיסת החיים באור הקבלה המעשית, בחירה מתוך אהבה ככוח עליון מניע, ולא מתוך החלופה שלו – הפחד.</p>
+        </li>
+        <li class="pillar">
+          <span class="medal"><svg viewBox="0 0 48 32"><use href="#lotus"/></svg></span>
+          <h3><b>ר</b>צון</h3>
+          <p>מתוך ניקוי הצינור מתאפשרת היכולת להבחין בין רצון נשמתי, הוא רצון השם, ומשם תנועה בנתיב החיים מתוך רצון אותנטי אינטואיטיבי, ולא זה הארצי, הבהמי, המונע מאמונות שהתאספו בתת המודע.</p>
+        </li>
+        <li class="pillar">
+          <span class="medal"><svg><use href="#road"/></svg></span>
+          <h3><b>ד</b>רך</h3>
+          <p>דרך חיים הוליסטית המכירה באיזון האנרגטי של השילוש הקדוש המתקיים בנו: רגשי–תודעתי, פיזי–גופני, רוחני–אמונה, חלק אלוקה ממעל.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== החיבור ===== -->
+  <section class="m-block" id="connection">
+    <div class="col">
+      <div class="lotus-rule" aria-hidden="true"><svg><use href="#lotus"/></svg></div>
+      <h2>החיבור בין כל חלקי ההוויה שלנו<br>כמפעיל ומניע</h2>
+      <p>השיטה בונה בהדרגה דרך חיים המבוססת על איזון אנרגטי, מתוך מודעות לשילוש הקדוש המתקיים בתוכנו – רגשי, פיזי, נשמתי – ומלמדת התחברות לשדה האחד המקיף אותנו כחלק מהשפע האינסופי. היא מאפשרת חיים בהקשבה והתמסרות אקטיבית לטובת התקדמות במסע הנשמתי החתום מראש.</p>
+
+      <svg class="triad" viewBox="0 0 360 250" role="img" aria-label="השילוש הקדוש: רגשי, פיזי, נשמתי, סביב השדה האחד">
+        <circle cx="180" cy="140" r="98" fill="none" stroke="#c9a063" stroke-width="1" stroke-dasharray="3 5" opacity=".7"/>
+        <path d="M180 52 266 196H94Z" fill="none" stroke="#c9a063" stroke-width="1.2"/>
+        <circle cx="180" cy="52" r="9" fill="#ebc57f"/><circle cx="266" cy="196" r="9" fill="#ebc57f"/><circle cx="94" cy="196" r="9" fill="#ebc57f"/>
+        <circle cx="180" cy="148" r="5" fill="#a37a3e"/>
+        <text x="180" y="28" text-anchor="middle">נשמתי – אמונה</text>
+        <text x="300" y="232" text-anchor="middle">רגשי – תודעתי</text>
+        <text x="60" y="232" text-anchor="middle">פיזי – גופני</text>
+        <text x="180" y="174" text-anchor="middle" style="font-size:13px;fill:#a37a3e">השדה האחד</text>
+      </svg>
+
+      <p style="margin-top:36px">מעבר לעקרונות מהפסיכולוגיה הביהביוריסטית, NLP ו־CBT, המהוות שיטות טיפול קצר מועד, השיטה נסמכת על הנסתר: מה שמעבר לגלוי, לחומרי־ארצי, לנראה לעין. זאת מתוך ניסיון מוכח כי הטיפול הרגשי מניע תמורות והתמרות פנימיות משמעותיות רק כשהוא מחובר לתורת הבריאה הטבעית, שניתנה לנו כמורה דרך להתפתחות בחיים.</p>
+      <p>שנים של לימודים אקדמיים ומעשיים, לצד חקר של נבכי הנפש דרך תורת הנסתר, שקיבלתי כאור שהוציא אותי בעצמי מחושך גדול, הביאו להבנה של התהליך המשמעותי ביותר שלשמו התכנסנו במסע החיים הזה:</p>
+    </div>
+    <div class="center" style="margin-top:34px"><p class="brush">המעבר מחיי הישרדות לחיי מימוש וסיפוק</p></div>
+  </section>
+
+  <!-- ===== החירות ===== -->
+  <section class="m-block" id="freedom">
+    <div class="col">
+      <p>החירות בעידן שלנו היא תודעתית. השלשלאות הכבדות המעכבות הן האמונות המחזיקות אותנו שבויים בפחדים שנטמעו בתת המודע, מחוויות עבר שלא עובדו נכון. זהו למעשה תהליך התיקון בדרך לארץ המובטחת – תהליך החלמה והבראה מכל מה שמשאיר אותנו בתחושה שלא טוב לנו, שאנחנו לא מסופקים.</p>
+      <p class="banner-pill">הדרך היא אחת. האמת היא אחת. מוכחת ללא צל של ספק.</p>
+      <p>וכפי שהישות שאנחנו כוללת בתוכה את כל מה שמעבר לגופני הפיזי, כך גם הטיפול, או תהליך התיקון, חייב להיות הוליסטי על מנת שיביא להתקדמות ולתוצאות.</p>
+    </div>
+  </section>
+
+  <!-- ===== עקרונות ===== -->
+  <section class="m-block" id="principles">
+    <div class="wide">
+      <div class="lotus-rule" aria-hidden="true"><svg><use href="#lotus"/></svg></div>
+      <h2>השיטה מלמדת תפיסת חיים שמשנה את המציאות</h2>
+      <ol class="principles">
+        <li class="principle"><span class="medal"><svg><use href="#stones"/></svg></span><div>
+          <h3><span class="letter">א.</span>חיים מתוך איזון אנרגטי</h3>
+          <p>איזון שהשמירה עליו היא מודעות והקשבה לכל חלקי הישות שאנחנו – רגשי, נפשי, פיזי.</p></div></li>
+        <li class="principle"><span class="medal"><svg><use href="#brain"/></svg></span><div>
+          <h3><span class="letter">ב.</span>החלפת מערכת ההפעלה שלנו</h3>
+          <p>ממודע נמוך (תת מודע) המניע מפחדים, לתודעה רחבה וגבוהה.</p></div></li>
+        <li class="principle"><span class="medal"><svg><use href="#path"/></svg></span><div>
+          <h3><span class="letter">ג.</span>חיים מתוך אמונה במסע הנשמתי</h3>
+          <p>ובמטרת העל – המעבר מחיי הישרדות לחיי מימוש, שהוא עיקר הסיפור הקבלי כולו.</p></div></li>
+        <li class="principle"><span class="medal"><svg><use href="#butterfly"/></svg></span><div>
+          <h3><span class="letter">ד.</span>נכיר את שלבי ההחלמה</h3>
+          <p>כגלגולו של פרפר: שלבי ההבראה, הבנייה מחדש, והמורכבויות שבתהליך נוכח החיים במטריקס.</p></div></li>
+        <li class="principle"><span class="medal"><svg viewBox="0 0 48 32"><use href="#lotus"/></svg></span><div>
+          <h3><span class="letter">ה.</span>ניקוי הצינור וחיבור לאינטואיציה</h3>
+          <p>החלק הרוחני שבעבודת התיקון הרגשי. עבודה עם מסרים והכוונה לחיזוק הביטחון הפנימי, שאנחנו נמצאים בדיוק במקום שאמורים להיות בו – בתהליך, בנתיב, במסע.</p></div></li>
+        <li class="principle"><span class="medal"><svg><use href="#sun"/></svg></span><div>
+          <h3><span class="letter">ו.</span>החלק הרוחני שבהבראה</h3>
+          <p>לשם בניית מציאות מהפנים אל החוץ: התמסרות, עבודה עם תדרים, שדה אנרגטי אחד, הקשר לזימון מציאות, רצוא ושוב כדרך חיים, והתמרה שהיא העלאת הניצוצות.</p></div></li>
+        <li class="principle"><span class="medal"><svg><use href="#infinity"/></svg></span><div>
+          <h3><span class="letter">ז.</span>אנרגיה נשית–זכרית</h3>
+          <p>קבלה לעומת השפעה, המשכן/הכלי והאור ותפקידם בדור של תיקון, דור של גאולה – מתיקון היחיד לחברה מתוקנת.</p></div></li>
+        <li class="principle"><span class="medal"><svg viewBox="0 0 40 52"><use href="#sefirot"/></svg></span><div>
+          <h3><span class="letter">ח.</span>הספירות כמורי דרך</h3>
+          <p>הכול תחילתו ברצון. עבודה מתוך שימת כוונה.</p></div></li>
+      </ol>
+
+      <div class="col after">
+        <p>מתוך תפיסה זו נלמד לזהות שיעורים, לחווט אמונות מחדש, וכך לרפא פצעי ילדות, דפוסים הרסניים, טראומות, חרדות, דאגנות וכל מה שנשמתנו הגיעה לתקן במסע החיים הזה.</p>
+        <p>שחרור אמונות והחלפתן בחדש־ישן שניתן לנו, שחרור מדפוסי שליטה ואמונה בכוח עליון המפעיל את הכול, אמונה במה שמעבר לגשמי – הנסתר.</p>
+        <p>השקה מדעית לחוקי הנסתר – השדה האחד, אנרגיה, תדרים.</p>
+      </div>
+      <p class="tools-note">* כתיבה אינטואיטיבית, נומרולוגיה ואסטרולוגיה קבליות ככלים משלימים ותומכים להצלחת התהליך.</p>
+    </div>
+  </section>
+
+  <div class="m-cta">
+    <h2>הדרך מתחילה מבפנים</h2>
+    <div class="lotus-rule" aria-hidden="true"><svg><use href="#lotus"/></svg></div>
+    <a class="btn btn-solid" href="index.html#contact">לשיחת היכרות <svg><use href="#arrow"/></svg></a>
+  </div>
+  <div class="sea" aria-hidden="true"></div>
+</main>
+
+<footer><div class="wrap">© מאיה · מסע לריפוי עצמי</div></footer>
+
+<script>
+const btn=document.getElementById('menu-btn'),nav=document.getElementById('nav');
+btn.addEventListener('click',()=>{const o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+nav.addEventListener('click',e=>{if(e.target.closest('a')){nav.classList.remove('open');btn.setAttribute('aria-expanded','false')}});
+</script>
+</body>
+</html>

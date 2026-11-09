@@ -1,6 +1,12 @@
 # מאיה – מסע לריפוי עצמי
 
-Static one-page site (Hebrew, RTL). No build step: `index.html` + `img/`.
+Static site (Hebrew, RTL). No build step.
+
+- `index.html` – home page
+- `story.html` – הסיפור שלי
+- `method.html` – אר"ד, השיטה המחברת
+- `styles.css` – shared styles
+- `img/` – images (`home-hero.jpg`, `story.jpg`, `method-circle.jpg` are the main photos)
 
 ## Run locally
 Open `index.html` in a browser, or run `npx serve .`

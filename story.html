@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="הסיפור של מאיה – מסע לריפוי עצמי.">
+<link rel="icon" href="img/logo.jpg">
+<title>הסיפור שלי | מאיה</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Assistant:wght@300;400;600&family=Amatic+SC:wght@400;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>
+body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+.story-hero .story-link{cursor:default}
+.story-hero .story-photo{min-height:520px}
+.story-text{background:var(--cream);padding-block:56px 40px}
+.story-text .col{max-width:760px;margin-inline:auto;padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
+.story-text p{font-family:var(--f-display);font-size:1.25rem;line-height:2;color:#3f3226;margin:0}
+.story-text p + p{margin-top:1.1em}
+.story-brush{text-align:center;margin-top:36px}
+.story-brush .brush-line{font-size:clamp(1.4rem,3.4vw,2rem)}
+.story-cta{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;padding-block:24px 80px;background:var(--cream)}
+.pampas{position:absolute;inset-inline-start:0;top:50%;transform:translateY(-50%);width:90px;color:#c9a063;opacity:.6;pointer-events:none}
+.story-side{position:relative}
+@media (max-width:760px){.story-hero .story-photo{min-height:380px}.pampas{display:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="heart" viewBox="0 0 24 22"><path fill="currentColor" d="M12 21S1 14 1 7a5.5 5.5 0 0 1 11-1 5.5 5.5 0 0 1 11 1c0 7-11 14-11 14Z"/></symbol>
+  <symbol id="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 8H3m4-4L3 8l4 4"/></symbol>
+</svg>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="מאיה – דף הבית">
+      <img src="img/logo.jpg" alt="">
+      <span><b>מאיה</b><small>מסע לריפוי עצמי</small></span>
+    </a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav">תפריט</button>
+    <ul class="nav" id="nav">
+      <li><a href="index.html">דף הבית</a></li>
+      <li><a href="story.html" aria-current="page">הסיפור שלי</a></li>
+      <li><a href="method.html">השיטה</a></li>
+      <li><a href="index.html#space">סדנאות והרצאות</a></li>
+      <li><a href="index.html#space">קורסים</a></li>
+      <li><a href="index.html#space">טקסטים</a></li>
+      <li class="accent"><a href="method.html#principles">פרוטוקולים וטכניקות</a></li>
+      <li><a href="index.html#contact">צור קשר</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="story-teaser story-hero">
+    <div class="story-link">
+      <div class="story-photo"><img src="img/story.jpg" alt="מאיה"></div>
+      <div class="story-side">
+        <h1 style="font-size:clamp(2.4rem,5vw,3.6rem)">הסיפור שלי</h1>
+        <div class="heart-rule wide-rule" aria-hidden="true"><svg><use href="#heart"/></svg></div>
+        <svg class="pampas" viewBox="0 0 60 200" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+          <path d="M50 200C40 140 30 80 10 0"/>
+          <path d="M44 160l-14-8M42 150l-16-6M40 140l-15-9M37 128l-16-6M35 116l-15-9M32 104l-16-6M30 92l-15-9M27 80l-15-6M25 68l-13-9M22 56l-13-6M19 44l-11-8M16 32l-9-6"/>
+          <path d="M44 160l12-10M42 150l12-8M40 140l11-10M37 128l12-8M35 116l10-10M32 104l11-8M30 92l9-10M27 80l9-8M25 68l7-9M22 56l7-8"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="story-text">
+    <div class="col">
+      <p>שנים של לימודים אקדמיים ומעשיים, לצד חקר של נבכי הנפש דרך תורת הנסתר, שקיבלתי כאור שהוציא אותי בעצמי מחושך גדול, הביאו להבנה של התהליך המשמעותי ביותר שלשמו התכנסנו במסע החיים הזה:</p>
+      <div class="story-brush"><span class="brush-line">המעבר מחיי הישרדות לחיי מימוש וסיפוק</span></div>
+    </div>
+  </section>
+  <div class="story-cta">
+    <a class="btn btn-solid" href="method.html">השיטה המחברת <svg><use href="#arrow"/></svg></a>
+    <a class="btn btn-line" href="index.html#contact">צור קשר <svg><use href="#arrow"/></svg></a>
+  </div>
+</main>
+
+<footer><div class="wrap">© מאיה · מסע לריפוי עצמי</div></footer>
+<script>
+const btn=document.getElementById('menu-btn'),nav=document.getElementById('nav');
+btn.addEventListener('click',()=>{const o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+nav.addEventListener('click',e=>{if(e.target.closest('a')){nav.classList.remove('open');btn.setAttribute('aria-expanded','false')}});
+</script>
+</body>
+</html>
