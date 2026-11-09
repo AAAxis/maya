@@ -12,8 +12,6 @@
 <link rel="stylesheet" href="styles.css">
 <style>
 body{margin:0}img{max-width:100%}[hidden]{display:none!important}
-.story-hero .story-link{cursor:default}
-.story-hero .story-photo{min-height:520px}
 .story-text{background:var(--cream);padding-block:56px 40px}
 .story-text .col{max-width:760px;margin-inline:auto;padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
 .story-text p{font-family:var(--f-display);font-size:1.25rem;line-height:2;color:#3f3226;margin:0}
@@ -21,14 +19,10 @@ body{margin:0}img{max-width:100%}[hidden]{display:none!important}
 .story-brush{text-align:center;margin-top:36px}
 .story-brush .brush-line{font-size:clamp(1.4rem,3.4vw,2rem)}
 .story-cta{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;padding-block:24px 80px;background:var(--cream)}
-.pampas{position:absolute;inset-inline-start:0;top:50%;transform:translateY(-50%);width:90px;color:#c9a063;opacity:.6;pointer-events:none}
-.story-side{position:relative}
-@media (max-width:760px){.story-hero .story-photo{min-height:380px}.pampas{display:none}}
 </style>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="heart" viewBox="0 0 24 22"><path fill="currentColor" d="M12 21S1 14 1 7a5.5 5.5 0 0 1 11-1 5.5 5.5 0 0 1 11 1c0 7-11 14-11 14Z"/></symbol>
   <symbol id="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 8H3m4-4L3 8l4 4"/></symbol>
 </svg>
 
@@ -53,18 +47,10 @@ body{margin:0}img{max-width:100%}[hidden]{display:none!important}
 </header>
 
 <main>
-  <section class="story-teaser story-hero">
-    <div class="story-link">
-      <div class="story-photo"><img src="img/story.jpg" alt="מאיה"></div>
-      <div class="story-side">
-        <h1 style="font-size:clamp(2.4rem,5vw,3.6rem)">הסיפור שלי</h1>
-        <div class="heart-rule wide-rule" aria-hidden="true"><svg><use href="#heart"/></svg></div>
-        <svg class="pampas" viewBox="0 0 60 200" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
-          <path d="M50 200C40 140 30 80 10 0"/>
-          <path d="M44 160l-14-8M42 150l-16-6M40 140l-15-9M37 128l-16-6M35 116l-15-9M32 104l-16-6M30 92l-15-9M27 80l-15-6M25 68l-13-9M22 56l-13-6M19 44l-11-8M16 32l-9-6"/>
-          <path d="M44 160l12-10M42 150l12-8M40 140l11-10M37 128l12-8M35 116l10-10M32 104l11-8M30 92l9-10M27 80l9-8M25 68l7-9M22 56l7-8"/>
-        </svg>
-      </div>
+  <section class="story-teaser">
+    <div class="story-banner">
+      <img src="img/story.jpg" width="1447" height="1087" alt="מאיה">
+      <h1 class="story-title">הסיפור שלי</h1>
     </div>
   </section>
 

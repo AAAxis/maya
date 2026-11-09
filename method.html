@@ -29,7 +29,7 @@ body{margin:0}img{max-width:100%}[hidden]{display:none!important}
 .method .wide{max-width:1120px;margin-inline:auto;padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
 .method p{font-size:1.22rem;line-height:2;margin:0}
 .method p + p{margin-top:1.1em}
-.leaf-branch{position:absolute;top:0;inset-inline-end:0;width:min(260px,40vw);color:#b8913f;opacity:.55;pointer-events:none}
+.leaf-branch{position:absolute;top:0;inset-inline-end:0;width:min(300px,42vw);pointer-events:none;mix-blend-mode:multiply;-webkit-mask-image:radial-gradient(130% 120% at 0 0,#000 45%,transparent 75%);mask-image:radial-gradient(130% 120% at 0 0,#000 45%,transparent 75%)}
 
 .m-hero{text-align:center;padding-block:56px 20px;display:flex;flex-direction:column;align-items:center;gap:18px}
 .sefirot-top{width:120px;height:auto;color:var(--gold);filter:drop-shadow(0 0 10px rgba(255,236,190,.9))}
@@ -91,7 +91,7 @@ section.m-block{padding-block:56px}
 .lotus-rule{display:flex;align-items:center;gap:14px;color:var(--gold);width:min(360px,80%);margin:8px auto}
 .lotus-rule::before,.lotus-rule::after{content:"";flex:1;height:1px;background:currentColor;opacity:.7}
 .lotus-rule svg{width:34px;height:22px}
-.sea{height:120px;background:linear-gradient(180deg,var(--cream) 0,#f3dcc0 35%,#b9cfd6 36%,#8fb2bf 70%,#7aa3b2 100%);opacity:.75}
+.sea{height:clamp(90px,11vw,161px);background:url("img/method-sea.jpg") center bottom/cover no-repeat;-webkit-mask-image:linear-gradient(180deg,transparent,#000 40%);mask-image:linear-gradient(180deg,transparent,#000 40%)}
 
 @media (max-width:860px){
   .principles{grid-template-columns:1fr}
@@ -154,13 +154,7 @@ section.m-block{padding-block:56px}
 </header>
 
 <main class="method">
-  <svg class="leaf-branch" viewBox="0 0 200 160" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
-    <path d="M0 6C50 20 100 50 190 150"/>
-    <path d="M40 18c-6-12-2-22 8-26 3 12-1 22-8 26Zm0 0c10-8 22-8 30 0-10 8-22 8-30 0Z"/>
-    <path d="M80 44c-4-13 1-23 12-25 2 12-3 22-12 25Zm0 0c11-6 23-4 30 5-11 6-23 4-30-5Z"/>
-    <path d="M118 78c-2-13 4-22 15-23 0 12-6 21-15 23Zm0 0c12-4 23 0 28 10-12 4-23 0-28-10Z"/>
-    <path d="M152 114c0-12 7-20 18-19-2 12-9 19-18 19Z"/>
-  </svg>
+  <img class="leaf-branch" src="img/method-branch.jpg" alt="">
 
   <!-- ===== opening ===== -->
   <div class="col">
