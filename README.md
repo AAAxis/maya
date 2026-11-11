@@ -5,6 +5,7 @@ Static site (Hebrew, RTL). No build step.
 - `index.html` – home page
 - `story.html` – הסיפור שלי
 - `method.html` – אר"ד, השיטה המחברת
+- `workshops.html` – סדנאות
 - `styles.css` – shared styles
 - `img/` – images (`home-hero.jpg`, `story.jpg`, `method-circle.jpg` are the main photos)
 
